@@ -2,10 +2,10 @@
   "name": "nodejs-helloworld",
   "version": "1.0.0",
   "description": "simple webapi which prints hello-world",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "author": "Sanket Modi",
   "license": "ISC",

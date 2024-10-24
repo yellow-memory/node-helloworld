@@ -22,7 +22,7 @@ var appRoute = function (app) {
         email;
       res.redirect(redirect_url);
     } else {
-      res.status(400).send(""); // Add status code for error
+      res.status(400).send("Please provide a valid email"); // Add status code for error
     }
   });
 };
